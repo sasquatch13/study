@@ -14,7 +14,7 @@ console.log(termData.length)
 
 console.log(randomNumber)
 
-card.innerHTML = '<h2 class="hand front">click me</h2>'
+card.innerHTML = '<h2 class="hand front">Click Me!</h2>'
 
 card.addEventListener("click", ()=> {clicked = !clicked
     if (clicked) {
