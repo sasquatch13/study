@@ -1,0 +1,45 @@
+body{
+    background-color: gray;
+    user-select: none;
+}
+
+h1{
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 1px 1px 5px black;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20em;
+    width: 40em;
+    background-color: azure;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hand{
+    font: 1em sans-serif;
+}
+
+.front, .back{
+    font-size: 5em;
+    color: black;
+    overflow: scroll;
+}
+
+.front{
+    text-decoration: underline;
+    color: darkslateblue;
+}
+
+.back{
+    padding: 50px;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    width:70%;
+    height: 50%;
+}
+
