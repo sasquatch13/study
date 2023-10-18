@@ -49,3 +49,35 @@ button{
     margin-right: auto;
     
 }
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 5em;
+    margin-right: 5em;
+    
+}
+
+
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
+    width: 10em;
+    background-color: azure;
+    margin: 5px;
+    transition: transform 0.3s;
+    overflow:scroll;
+    border: 2px solid gray;
+    font-size: small;
+
+}
+
+li:hover{
+    transform: scale(3);
+    
+
+}

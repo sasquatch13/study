@@ -16,18 +16,44 @@ card.innerHTML = '<h2 class="hand front">Click Me!</h2>'
 
 card.addEventListener("click", ()=> {clicked = !clicked
     if (clicked) {
-       btn.disabled = true 
         if (clicked = true){
-            btn.disabled = false
         }
         card.innerHTML = `<h2 class="hand front">${termData[randomNumber].term}</h2>`
     } else {
-        btn.disabled = false
         card.innerHTML = `<h2 class="hand back">${termData[randomNumber].definition}</h2>`
     prevNum = randomNumber
     randomNumber = getRandomNumber()}
     })
 
-btn.addEventListener("click", function(){
-    defList.innerHTML += `<li>${termData[prevNum].term}${termData[prevNum].definition}</li>`
-})
+// btn.addEventListener("click", function(){
+//     defList.innerHTML += `<li>${termData[prevNum].term}${termData[prevNum].definition}</li>`
+// })
+
+
+
+// Function to populate the DOM with "thing 1" items
+function populateCardList() {
+    const cardList = document.getElementById("cardList");
+    cardList.innerHTML = ""; // Clear existing list
+
+    termData.forEach(item => {
+        const cardsItem = document.createElement("li");
+        cardsItem.textContent = item.term;
+
+        // Add a click event listener to toggle between "thing 1" and "thing 2"
+        cardsItem.addEventListener("click", () => {
+            if (item.toggled) {
+                item.toggled = false;
+                cardsItem.textContent = item.term;
+            } else {
+                item.toggled = true;
+                cardsItem.textContent = item.definition;
+            }
+        });
+
+        cardList.appendChild(cardsItem);
+    });
+}
+
+// Populate the initial "thing 1" list
+populateCardList();
