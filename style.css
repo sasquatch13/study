@@ -1,5 +1,5 @@
 body{
-    background-color: gray;
+    background-color: purple;
     user-select: none;
 }
 
@@ -10,7 +10,6 @@ h1{
 }
 
 .card{
-    background-color: blueviolet;
     display: flex;
     padding: 15px;
     text-align: center;
