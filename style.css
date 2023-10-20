@@ -11,6 +11,8 @@ h1{
 
 .card{
     display: flex;
+    padding: 15px;
+    text-align: center;
     justify-content: center;
     align-items: center;
     height: 20em;
@@ -25,7 +27,6 @@ h1{
 }
 
 .front, .back{
-    padding: 50px;
     overflow: scroll;
     height: 50%;
 }
