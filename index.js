@@ -9,6 +9,10 @@ let prevNum
 let acronymCounter = 0
 let acronymClicked = true
 
+function getAcronymRandomNumber(){
+    return Math.floor((Math.random() * acronyms.length))
+}
+
 function getRandomNumber(){
     return Math.floor((Math.random() * termData.length))}
 
@@ -90,4 +94,18 @@ document.getElementById("acronym-card").addEventListener("click", ()=>{
     if (acronymClicked) {
         document.getElementById("acronym-card").innerHTML = `<h2>${acronyms[acronymCounter].short}</h2>`
     }
+})
+
+document.getElementById("restart").addEventListener("click", ()=>{
+    acronymClicked = true
+    acronymCounter = 0 
+    acronymCardDisplay()
+
+})
+
+document.getElementById("random").addEventListener("click", ()=> {
+    acronymClicked = true
+    acronymCounter = getAcronymRandomNumber()
+    acronymCardDisplay()
+
 })
