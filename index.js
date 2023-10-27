@@ -33,7 +33,7 @@ card.addEventListener("click", ()=> {clicked = !clicked
 
 
 
-// Function to populate the DOM with "thing 1" items
+// Function to populate the DOM with "term" items
 function populateCardList() {
     const cardList = document.getElementById("cardList");
     cardList.innerHTML = ""; // Clear existing list
@@ -42,7 +42,7 @@ function populateCardList() {
         const cardsItem = document.createElement("li");
         cardsItem.textContent = item.term;
 
-        // Add a click event listener to toggle between "thing 1" and "thing 2"
+        // Add a click event listener to toggle between "term" and "definition"
         cardsItem.addEventListener("click", () => {
             if (item.toggled) {
                 item.toggled = false;
@@ -57,7 +57,7 @@ function populateCardList() {
     });
 }
 
-// Populate the initial "thing 1" list
+// Populate the initial "term" list
 populateCardList();
 
 function acronymCardDisplay(){
@@ -67,6 +67,7 @@ function acronymCardDisplay(){
 acronymCardDisplay()
 
 document.getElementById("prev-btn").addEventListener("click", ()=> {
+    acronymClicked = true
     if (acronymCounter >= 0){
         acronymCounter--
     }
@@ -74,6 +75,7 @@ document.getElementById("prev-btn").addEventListener("click", ()=> {
 })
 
 document.getElementById("next-btn").addEventListener("click", ()=> {
+    acronymClicked = true
     if (acronymCounter <= acronyms.length){
         acronymCounter++
     }
@@ -82,10 +84,10 @@ document.getElementById("next-btn").addEventListener("click", ()=> {
 
 document.getElementById("acronym-card").addEventListener("click", ()=>{
     acronymClicked = !acronymClicked
-    if (acronymClicked) {
-        document.getElementById("acronym-card").innerHTML = `<h2>${acronyms[acronymCounter].short}</h2>`
-    }
     if (acronymClicked === false) {
         document.getElementById("acronym-card").innerHTML = `<h2>${acronyms[acronymCounter].long}</h2>`
+    }
+    if (acronymClicked) {
+        document.getElementById("acronym-card").innerHTML = `<h2>${acronyms[acronymCounter].short}</h2>`
     }
 })

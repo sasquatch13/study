@@ -175,7 +175,7 @@ export const acronyms = [
     long: "Single Sign-On"},
 	{short: "SWG",
     long: "Secure Web Gateway"},
-	{short: "TC",
+	{short: "TCP",
     long: "	Transport Control Protocol"},
 	{short: "TLS",
     long: "Transport Layer Security"},

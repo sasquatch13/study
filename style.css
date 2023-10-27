@@ -5,8 +5,8 @@ body{
 
 h1{
     text-align: center;
-    color: whitesmoke;
-    text-shadow: 1px 1px 5px black;
+    color: #422800;
+    font-size: 4em;
 }
 
 .card{
@@ -23,11 +23,11 @@ h1{
     cursor: pointer;
     margin-bottom: 20px;
     margin-top: 20px;
+    border: 2px solid #422800;
+    box-shadow: #422800 4px 4px 0 0;
 }
 
-.hand{
-    font: 1em sans-serif;
-}
+
 
 .front, .back{
     overflow: scroll;
@@ -76,8 +76,9 @@ li{
     margin: 5px;
     transition: transform 0.3s;
     overflow:scroll;
-    border: 2px solid gray;
+    border: 2px solid #422800;
     font-size: small;
+    box-shadow: #422800 4px 4px 0 0;
 
 }
 
@@ -108,6 +109,7 @@ button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  margin-bottom: 20px;
 }
 
 button:hover {
@@ -124,4 +126,12 @@ button:active {
     min-width: 120px;
     padding: 0 25px;
   }
+}
+
+hr{
+    border: 3px solid #422800;
+}
+
+#acronym-card > h2{
+    font-size: 3em;
 }
