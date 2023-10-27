@@ -1,4 +1,4 @@
-import {termData} from "./data.js"
+import {termData, acronyms} from "./data.js"
 
 const defList = document.getElementById("def-list")
 const card = document.getElementById('card')
@@ -6,6 +6,8 @@ const btn = document.getElementById("btn")
 let clicked = false
 const list = []
 let prevNum
+let acronymCounter = 0
+let acronymClicked = true
 
 function getRandomNumber(){
     return Math.floor((Math.random() * termData.length))}
@@ -57,3 +59,33 @@ function populateCardList() {
 
 // Populate the initial "thing 1" list
 populateCardList();
+
+function acronymCardDisplay(){
+    document.getElementById("acronym-card").innerHTML = `<h2>${acronyms[acronymCounter].short}</h2>`
+}
+
+acronymCardDisplay()
+
+document.getElementById("prev-btn").addEventListener("click", ()=> {
+    if (acronymCounter >= 0){
+        acronymCounter--
+    }
+    acronymCardDisplay()
+})
+
+document.getElementById("next-btn").addEventListener("click", ()=> {
+    if (acronymCounter <= acronyms.length){
+        acronymCounter++
+    }
+    acronymCardDisplay()
+})
+
+document.getElementById("acronym-card").addEventListener("click", ()=>{
+    acronymClicked = !acronymClicked
+    if (acronymClicked) {
+        document.getElementById("acronym-card").innerHTML = `<h2>${acronyms[acronymCounter].short}</h2>`
+    }
+    if (acronymClicked === false) {
+        document.getElementById("acronym-card").innerHTML = `<h2>${acronyms[acronymCounter].long}</h2>`
+    }
+})
