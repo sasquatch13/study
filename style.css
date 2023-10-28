@@ -136,7 +136,7 @@ hr{
     font-size: 3em;
 }
 
-@media  (min-width:320px) {
+@media screen and (max-width:500px) {
     .btns{
         flex-direction: column;
     }
