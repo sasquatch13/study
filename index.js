@@ -18,7 +18,7 @@ function getRandomNumber(){
 
 let randomNumber = getRandomNumber()
 
-card.innerHTML = '<h2 class="hand front">Click Me!</h2>'
+card.innerHTML = '<h2 class="hand front">Click Here!</h2>'
 
 card.addEventListener("click", ()=> {clicked = !clicked
     if (clicked) {
@@ -30,12 +30,6 @@ card.addEventListener("click", ()=> {clicked = !clicked
     prevNum = randomNumber
     randomNumber = getRandomNumber()}
     })
-
-// btn.addEventListener("click", function(){
-//     defList.innerHTML += `<li>${termData[prevNum].term}${termData[prevNum].definition}</li>`
-// })
-
-
 
 // Function to populate the DOM with "term" items
 function populateCardList() {
@@ -72,7 +66,10 @@ acronymCardDisplay()
 
 document.getElementById("prev-btn").addEventListener("click", ()=> {
     acronymClicked = true
-    if (acronymCounter >= 0){
+    if (acronymCounter === 0){
+        acronymCounter = acronymCounter
+    }
+    if (acronymCounter > 0){
         acronymCounter--
     }
     acronymCardDisplay()
@@ -80,7 +77,10 @@ document.getElementById("prev-btn").addEventListener("click", ()=> {
 
 document.getElementById("next-btn").addEventListener("click", ()=> {
     acronymClicked = true
-    if (acronymCounter <= acronyms.length){
+    if (acronymCounter ===  acronyms.length){
+        acronymCounter = acronymCounter
+    }
+    if (acronymCounter < acronyms.length){
         acronymCounter++
     }
     acronymCardDisplay()
@@ -109,3 +109,5 @@ document.getElementById("random").addEventListener("click", ()=> {
     acronymCardDisplay()
 
 })
+
+console.log(acronymCounter)

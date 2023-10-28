@@ -137,17 +137,23 @@ hr{
 }
 
 @media  (min-width:320px) {
-    .phone-btn-full{
-        width: 80%;
+    .btns{
+        flex-direction: column;
     }
-    .phone-btn-half{
-        width: 45%;
+    button{
+        width: 90%;
+        margin-top: 10px;
+        margin-bottom: 0;
     }
     .prev-btn-phone{
-        order: -2;
-    }
-    .next-btn-phone{
         order: -1;
     }
-
+    .next-btn-phone{
+        order: -2;
+    }
+    .card{
+    height: 10em;
+    width: 20em;
+    font-size: 1em;
+    }
 }
