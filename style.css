@@ -135,3 +135,19 @@ hr{
 #acronym-card > h2{
     font-size: 3em;
 }
+
+@media  (min-width:320px) {
+    .phone-btn-full{
+        width: 80%;
+    }
+    .phone-btn-half{
+        width: 45%;
+    }
+    .prev-btn-phone{
+        order: -2;
+    }
+    .next-btn-phone{
+        order: -1;
+    }
+
+}
